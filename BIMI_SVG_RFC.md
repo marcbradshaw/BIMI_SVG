@@ -47,10 +47,69 @@ drawings.
 
 ## Disallowed sections
 
+Forbidden: Media, Interactivity, Linking, Scripting, Animation
+
 ## Permitted sections
+
+Allowed: Path, Shapes, Text(?), Painting, Metadata
+
+## Unadvised Sections
+
+Advise against: Fonts
+
+## Required Attributes
+
+The attribites below are required for SVG 1.2 BIMI:
+
+o title: This is a space where the title of the entity MUST be
+ published. This may allow for individuals with disabilities 
+ to have some knowledge about the image. For brevity, this SHOULD 
+ be no more 64 characters.
+ 
+ `<title>Example, Inc</title>`
+
+o desc: A longer description would be permitted here, if necessary.
+
+`<desc>BIMI logo intended for use with Example, Inc. messages</desc>`
+
+o version: This tag MUST be set to "1.2".
+
+`<version>1.2</version>`
+
+o baseProfile: This tag MUST be set to "tiny".
+
+`<baseProfile>tiny</baseProfile>`
+
+o zoomAndPan: This tag MUST be set to disable, as it may cause issues in
+ a user interface.
+
+`<zoomAndPan>disable</zoomAndPan>`
+
+o externalResourcesRequired: This attribute MUST be set to "false" so that
+ external resources are not required for rendering.
+ 
+`<externalResourcesRequired>false</externalResourcesRequired>`
+
+
+## Disallowed Attributes
+
+image
 
 ## Elements allowed in SVG 1.2 BIMI
 
+
+
+### Notes
+
+version = "1.0" | "1.1" | "1.2"
+baseProfile = "none" | "full" | "basic" | "tiny"
+preserveAspectRatio = ["defer"] <align> [<meet>]
+zoomAndPan = "magnify" | "disable"
+5.7 The 'image' element
+externalResourcesRequired = "false" | "true"
+
+
+# Security Considerations
 
 # Contributors
 TBD
