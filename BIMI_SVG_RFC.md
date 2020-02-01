@@ -58,8 +58,6 @@ to be used in SVG 1.2 BIMI:
 
 * 11 Painting 
 
-* 18 Metadata
-
 ## Disallowed sections
 
 THe attributes described in the sections below are expressly
@@ -75,9 +73,14 @@ forbidden from use in SVG 1.2 BIMI:
 
 * 16 Animation
 
+* 18 Metadata
+
 ## Unadvised Sections
 
-Advise against: Fonts
+The sections below are of questionable value to the documents, but
+are not expressly forbidden.
+
+* 17 Fonts
 
 ## Required Attributes
 
