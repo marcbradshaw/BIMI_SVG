@@ -50,30 +50,30 @@ drawings.
 These attributes described in the sections listed below are permitted
 to be used in SVG 1.2 BIMI:
 
-o 8 Paths
+* 8 Paths
 
-o 9 Basic Shapes
+* 9 Basic Shapes
 
-o 10 Text
+* 10 Text
 
-o 11 Painting 
+* 11 Painting 
 
-o 18 Metadata
+* 18 Metadata
 
 ## Disallowed sections
 
 THe attributes described in the sections below are expressly
 forbidden from use in SVG 1.2 BIMI:
 
-o 12 Multimedia
+* 12 Multimedia
 
-o 13 Interactivity
+* 13 Interactivity
 
-o 14 Linking
+* 14 Linking
 
-o 15 Scripting
+* 15 Scripting
 
-o 16 Animation
+* 16 Animation
 
 ## Unadvised Sections
 
@@ -83,62 +83,54 @@ Advise against: Fonts
 
 The attribites below are required for SVG 1.2 BIMI:
 
-o title: This is a space where the title of the entity MUST be
- published. This may allow for individuals with disabilities 
- to have some knowledge about the image. For brevity, this SHOULD 
- be no more 64 characters.
+* title: This is a space where the title of the entity MUST be
+  published. This may allow for individuals with disabilities 
+  to have some knowledge about the image. For brevity, this SHOULD 
+  be no more 64 characters.
  
  `<title>Example, Inc</title>`
 
-o desc: A longer description would be permitted here, if necessary.
+* desc: A longer description would be permitted here, if necessary.
 
 `<desc>BIMI logo intended for use with Example, Inc. messages</desc>`
 
-o version: This tag MUST be set to "1.2".
+* version: This tag MUST be set to "1.2".
 
 `<version>1.2</version>`
 
-o baseProfile: This tag MUST be set to "tiny".
+* baseProfile: This tag MUST be set to "tiny".
 
 `<baseProfile>tiny</baseProfile>`
 
-o zoomAndPan: This tag MUST be set to disable, as it may cause issues in
+* zoomAndPan: This tag MUST be set to disable, as it may cause issues in
  a user interface.
 
 `<zoomAndPan>disable</zoomAndPan>`
 
-o externalResourcesRequired: This attribute MUST be set to "false" so that
+* externalResourcesRequired: This attribute MUST be set to "false" so that
  external resources are not required for rendering.
  
 `<externalResourcesRequired>false</externalResourcesRequired>`
 
 
-## Disallowed Attributes
-
-image
-
 ## Elements allowed in SVG 1.2 BIMI
 
+```Do we want to explicitly state which tags are permitted?```
 
+# Notes
 
-### Notes
-
-version = "1.0" | "1.1" | "1.2"
-baseProfile = "none" | "full" | "basic" | "tiny"
-preserveAspectRatio = ["defer"] <align> [<meet>]
-zoomAndPan = "magnify" | "disable"
-5.7 The 'image' element
-externalResourcesRequired = "false" | "true"
-
+TBD
 
 # Security Considerations
 
+N/A
+
 # Contributors
+
 TBD
 
 # References
+
 TBD
-
-
 
 {backmatter}
