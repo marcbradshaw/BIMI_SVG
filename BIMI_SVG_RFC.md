@@ -45,13 +45,35 @@ drawings.
 
 # SVG 1.2 BIMI
 
-## Disallowed sections
-
-Forbidden: Media, Interactivity, Linking, Scripting, Animation
-
 ## Permitted sections
 
-Allowed: Path, Shapes, Text(?), Painting, Metadata
+These attributes described in the sections listed below are permitted
+to be used in SVG 1.2 BIMI:
+
+o 8 Paths
+
+o 9 Basic Shapes
+
+o 10 Text
+
+o 11 Painting 
+
+o 18 Metadata
+
+## Disallowed sections
+
+THe attributes described in the sections below are expressly
+forbidden from use in SVG 1.2 BIMI:
+
+o 12 Multimedia
+
+o 13 Interactivity
+
+o 14 Linking
+
+o 15 Scripting
+
+o 16 Animation
 
 ## Unadvised Sections
 
