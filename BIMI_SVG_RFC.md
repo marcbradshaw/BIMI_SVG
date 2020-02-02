@@ -113,7 +113,11 @@ in the base `<svg>` tag.
 
 # Notes
 
-TBD
+Need to discuss: 
+
+* https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/single-page.html#coords-PreserveAspectRatioAttribute
+
+
 
 # Security Considerations
 
