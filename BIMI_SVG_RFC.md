@@ -37,15 +37,13 @@ for elements that can create challenges.  By limiting BIMI-related SVG
 documents to a subset of the overall SVG specification, this should make
 the above goal more feasible.
 
-Currently, the SVG standard is at version 1.1, while SVG Tiny is at 1.2, 
-and these are both W3C standards.
+Currently, the SVG standard is at version 1.1 [W3C.REC-SVG11-20110816], 
+while SVG Tiny is at 1.2  [W3C.REC-SVGTiny12-20081222], 
+and these are both W3C standards.  The definition below will outline 
+SVG 1.2 BIMI, an SVG profile that is suitable for use with BIMI.  This new
+profile will use SVG Tiny as a base.
 
-https://www.w3.org/TR/2011/REC-SVG11-20110816/
 
-https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/
-
-The definition below will outline SVG 1.2 BIMI, an SVG profile that is 
-suitable for use with BIMI.
 
 
 # SVG 1.2 BIMI
@@ -117,6 +115,10 @@ in the base `<svg>` tag.
 ```Do we want to explicitly state which tags are permitted?```
 
 # Notes
+
+https://www.w3.org/TR/2011/REC-SVG11-20110816/
+
+https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/
 
 Need to discuss: 
 
