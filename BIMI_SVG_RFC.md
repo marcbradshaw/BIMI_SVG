@@ -37,11 +37,16 @@ for elements that can create challenges.  By limiting BIMI-related SVG
 documents to a subset of the overall SVG specification, this should make
 the above goal more feasible.
 
-SVG (Scalable Vector Graphics) has been developed by W3C, the World
-Wide Web Consortium; its current standard is SVG 1.1 Full
-[@W3C.REC-SVG11-20110816].  This document defines SVG 1.2 RFC, an SVG
-profile (i.e., a subset of SVG) that is suitable for RFC line
-drawings.
+Currently, the SVG standard is at version 1.1, while SVG Tiny is at 1.2, 
+and these are both W3C standards.
+
+https://www.w3.org/TR/2011/REC-SVG11-20110816/
+
+https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/
+
+The definition below will outline SVG 1.2 BIMI, an SVG profile that is 
+suitable for use with BIMI.
+
 
 # SVG 1.2 BIMI
 
