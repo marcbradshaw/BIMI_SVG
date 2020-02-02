@@ -94,11 +94,11 @@ in the base `<svg>` tag.
  
 * desc: A longer description would be permitted here, if necessary.
 
-* version: This tag MUST be set to "1.2".
+* version: This attribute MUST be set to "1.2".
 
-* baseProfile: This tag MUST be set to "tiny".
+* baseProfile: This attribute MUST be set to "tiny".
 
-* zoomAndPan: This tag MUST be set to disable, as it may cause issues in
+* zoomAndPan: This attribute MUST be set to disable, as it may cause issues in
  a user interface.
 
 * externalResourcesRequired: This attribute MUST be set to "false" so that
