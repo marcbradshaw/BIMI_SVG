@@ -124,7 +124,7 @@ Need to discuss:
 
 * https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/single-page.html#coords-PreserveAspectRatioAttribute
 
-
+Comparison: https://tools.ietf.org/html/rfc7996
 
 # Security Considerations
 
