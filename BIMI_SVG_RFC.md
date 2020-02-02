@@ -84,37 +84,28 @@ are not expressly forbidden.
 
 ## Required Attributes
 
-The attribites below are required for SVG 1.2 BIMI:
+The attribites below are required for SVG 1.2 BIMI.  These should be declared
+in the base `<svg>` tag.
 
 * title: This is a space where the title of the entity MUST be
   published. This may allow for individuals with disabilities 
   to have some knowledge about the image. For brevity, this SHOULD 
   be no more 64 characters.
  
- `<title>Example, Inc</title>`
-
 * desc: A longer description would be permitted here, if necessary.
-
-`<desc>BIMI logo intended for use with Example, Inc. messages</desc>`
 
 * version: This tag MUST be set to "1.2".
 
-`<version>1.2</version>`
-
 * baseProfile: This tag MUST be set to "tiny".
-
-`<baseProfile>tiny</baseProfile>`
 
 * zoomAndPan: This tag MUST be set to disable, as it may cause issues in
  a user interface.
 
-`<zoomAndPan>disable</zoomAndPan>`
-
 * externalResourcesRequired: This attribute MUST be set to "false" so that
  external resources are not required for rendering.
- 
-`<externalResourcesRequired>false</externalResourcesRequired>`
 
+`<svg width="1cm" height="1cm" version="1.2" baseProfile="tiny" `
+`         zoomAndPan="disable" externalResourcesRequires="false">`
 
 ## Elements allowed in SVG 1.2 BIMI
 
