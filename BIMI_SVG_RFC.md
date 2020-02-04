@@ -107,8 +107,11 @@ in the base `<svg>` tag.
 * externalResourcesRequired: This attribute MUST be set to "false" so that
  external resources are not required for rendering.
 
-`<svg width="1cm" height="1cm" version="1.2" baseProfile="tiny" `
-`         zoomAndPan="disable" externalResourcesRequires="false">`
+* preserveAspectRatio: This should be set to xMidYMid, and should center the image
+ in the viewbox when the size is changed.
+
+`<svg width="1cm" height="1cm" version="1.2" baseProfile="tiny" zoomAndPan="disable"`
+`         externalResourcesRequires="false" perserveAspectRatio="xMidYMid"`
 
 ## Elements allowed in SVG 1.2 BIMI
 
@@ -119,10 +122,6 @@ in the base `<svg>` tag.
 https://www.w3.org/TR/2011/REC-SVG11-20110816/
 
 https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/
-
-Need to discuss: 
-
-* https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/single-page.html#coords-PreserveAspectRatioAttribute
 
 Comparison: https://tools.ietf.org/html/rfc7996
   (esp note App A: RNC for validation)
