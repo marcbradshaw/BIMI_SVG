@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rfc SYSTEM 'rfc2629.dtd' []>
+<rfc ipr="trust200902" category="std" docName="draft-bimi-svg-abrotman-01">
+<?rfc toc="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<?rfc private=""?>
+<?rfc topblock="yes"?>
+<?rfc comments="no"?>
+<front>
+<title abbrev="BIMI-SVG">SVG Requirements for BIMI: SVG 1.2 BIMI</title>
+
+<author initials="A." surname="Brotman" fullname="Alex Brotman">
+<organization>Comcast, Inc</organization>
+<address>
+<postal>
+<street></street>
+<city></city>
+<code></code>
+<country></country>
+<region></region>
+</postal>
+<phone></phone>
+<email>alex_brotman@comcast.com</email>
+<uri></uri>
+</address>
+</author>
+<date year="2020" month="January" day="30"/>
+
+<area>Applications</area>
+<workgroup></workgroup>
+<keyword></keyword>
+
+
+<abstract>
+<t>This document specifies SVG 1.2 BIMI -- An SVG profile to be used for
+images that are meant to be displayed in conjunction with BIMI.
+</t>
+</abstract>
+
+
+</front>
+
+<middle>
+
+<section anchor="introduction" title="Introduction">
+<t>The Brand Indicators for Message Identification (BIMI) specification has
+a requirement that associated image files must be SVG documents. These
+documents are meant to be self-contained and scalable.  SVG does allow
+for elements that can create challenges.  By limiting BIMI-related SVG
+documents to a subset of the overall SVG specification, this should make
+the above goal more feasible.
+</t>
+<t>Currently, the SVG standard is at version 1.1 [W3C.REC-SVG11-20110816],
+while SVG Tiny is at 1.2  [W3C.REC-SVGTiny12-20081222],
+and these are both W3C standards.  The definition below will outline
+SVG 1.2 BIMI, an SVG profile that is suitable for use with BIMI.  This new
+profile will use SVG Tiny as a base.
+</t>
+</section>
+
+<section anchor="svg-12-bimi" title="SVG 1.2 BIMI">
+
+<section anchor="permitted-sections" title="Permitted sections">
+<t>These attributes described in the sections listed below are permitted
+to be used in SVG 1.2 BIMI:
+</t>
+<t>
+<list style="symbols">
+<t>8 Paths</t>
+<t>9 Basic Shapes</t>
+<t>10 Text</t>
+<t>11 Painting</t>
+</list>
+</t>
+</section>
+
+<section anchor="disallowed-sections" title="Disallowed sections">
+<t>THe attributes described in the sections below are expressly
+forbidden from use in SVG 1.2 BIMI:
+</t>
+<t>
+<list style="symbols">
+<t>12 Multimedia</t>
+<t>13 Interactivity</t>
+<t>14 Linking</t>
+<t>15 Scripting</t>
+<t>16 Animation</t>
+<t>18 Metadata</t>
+</list>
+</t>
+</section>
+
+<section anchor="unadvised-sections" title="Unadvised Sections">
+<t>The sections below are of questionable value to the documents, but
+are not expressly forbidden.
+</t>
+<t>
+<list style="symbols">
+<t>17 Fonts</t>
+</list>
+</t>
+</section>
+
+<section anchor="required-attributes" title="Required Attributes">
+<t>The attribites below are required for SVG 1.2 BIMI.  These should be declared
+in the base <spanx style="verb">&lt;svg&gt;</spanx> tag.
+</t>
+<t>
+<list style="symbols">
+<t>title: This is a space where the title of the entity MUST be
+published. This may allow for individuals with disabilities
+to have some knowledge about the image. For brevity, this SHOULD
+be no more 64 characters.</t>
+<t>desc: A longer description would be permitted here, if necessary.</t>
+<t>version: This attribute MUST be set to &quot;1.2&quot;.</t>
+<t>baseProfile: This attribute MUST be set to &quot;tiny&quot;.</t>
+<t>zoomAndPan: This attribute MUST be set to disable, as it may cause issues in
+a user interface.</t>
+<t>externalResourcesRequired: This attribute MUST be set to &quot;false&quot; so that
+external resources are not required for rendering.</t>
+<t>preserveAspectRatio: This should be set to xMidYMid, and should center the image
+in the viewbox when the size is changed.</t>
+</list>
+</t>
+<t><spanx style="verb">&lt;svg width="1cm" height="1cm" version="1.2" baseProfile="tiny" zoomAndPan="disable"</spanx>
+<spanx style="verb">externalResourcesRequires="false" perserveAspectRatio="xMidYMid"</spanx>
+</t>
+</section>
+
+<section anchor="elements-allowed-in-svg-12-bimi" title="Elements allowed in SVG 1.2 BIMI">
+<t><spanx style="verb">Do we want to explicitly state which tags are permitted?</spanx>
+</t>
+</section>
+</section>
+
+<section anchor="notes" title="Notes">
+<t><eref target="https://www.w3.org/TR/2011/REC-SVG11-20110816/"/>
+</t>
+<t><eref target="https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/"/>
+</t>
+<t>Comparison: <eref target="https://tools.ietf.org/html/rfc7996"/>
+  (esp note App A: RNC for validation)
+</t>
+</section>
+
+<section anchor="security-considerations" title="Security Considerations">
+<t>N/A
+</t>
+</section>
+
+<section anchor="contributors" title="Contributors">
+<t>TBD
+</t>
+</section>
+
+<section anchor="references" title="References">
+<t>TBD
+</t>
+</section>
+
+</middle>
+<back>
+
+</back>
+</rfc>
