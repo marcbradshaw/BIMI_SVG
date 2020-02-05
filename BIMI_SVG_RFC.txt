@@ -1,0 +1,224 @@
+
+
+
+
+Network Working Group                                         A. Brotman
+Internet-Draft                                              Comcast, Inc
+Intended status: Standards Track                        January 30, 2020
+Expires: August 2, 2020
+
+
+                SVG Requirements for BIMI: SVG 1.2 BIMI
+                       draft-bimi-svg-abrotman-01
+
+Abstract
+
+   This document specifies SVG 1.2 BIMI -- An SVG profile to be used for
+   images that are meant to be displayed in conjunction with BIMI.
+
+Status of This Memo
+
+   This Internet-Draft is submitted in full conformance with the
+   provisions of BCP 78 and BCP 79.
+
+   Internet-Drafts are working documents of the Internet Engineering
+   Task Force (IETF).  Note that other groups may also distribute
+   working documents as Internet-Drafts.  The list of current Internet-
+   Drafts is at https://datatracker.ietf.org/drafts/current/.
+
+   Internet-Drafts are draft documents valid for a maximum of six months
+   and may be updated, replaced, or obsoleted by other documents at any
+   time.  It is inappropriate to use Internet-Drafts as reference
+   material or to cite them other than as "work in progress."
+
+   This Internet-Draft will expire on August 2, 2020.
+
+Copyright Notice
+
+   Copyright (c) 2020 IETF Trust and the persons identified as the
+   document authors.  All rights reserved.
+
+   This document is subject to BCP 78 and the IETF Trust's Legal
+   Provisions Relating to IETF Documents
+   (https://trustee.ietf.org/license-info) in effect on the date of
+   publication of this document.  Please review these documents
+   carefully, as they describe your rights and restrictions with respect
+   to this document.  Code Components extracted from this document must
+   include Simplified BSD License text as described in Section 4.e of
+   the Trust Legal Provisions and are provided without warranty as
+   described in the Simplified BSD License.
+
+
+
+
+
+
+Brotman                  Expires August 2, 2020                 [Page 1]
+
+Internet-Draft                  BIMI-SVG                    January 2020
+
+
+Table of Contents
+
+   1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
+   2.  SVG 1.2 BIMI  . . . . . . . . . . . . . . . . . . . . . . . .   2
+     2.1.  Permitted sections  . . . . . . . . . . . . . . . . . . .   2
+     2.2.  Disallowed sections . . . . . . . . . . . . . . . . . . .   3
+     2.3.  Unadvised Sections  . . . . . . . . . . . . . . . . . . .   3
+     2.4.  Required Attributes . . . . . . . . . . . . . . . . . . .   3
+     2.5.  Elements allowed in SVG 1.2 BIMI  . . . . . . . . . . . .   4
+   3.  Notes . . . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   4.  Security Considerations . . . . . . . . . . . . . . . . . . .   4
+   5.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .   4
+   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+   Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+1.  Introduction
+
+   The Brand Indicators for Message Identification (BIMI) specification
+   has a requirement that associated image files must be SVG documents.
+   These documents are meant to be self-contained and scalable.  SVG
+   does allow for elements that can create challenges.  By limiting
+   BIMI-related SVG documents to a subset of the overall SVG
+   specification, this should make the above goal more feasible.
+
+   Currently, the SVG standard is at version 1.1 [W3C.REC-
+   SVG11-20110816], while SVG Tiny is at 1.2 [W3C.REC-
+   SVGTiny12-20081222], and these are both W3C standards.  The
+   definition below will outline SVG 1.2 BIMI, an SVG profile that is
+   suitable for use with BIMI.  This new profile will use SVG Tiny as a
+   base.
+
+2.  SVG 1.2 BIMI
+
+2.1.  Permitted sections
+
+   These attributes described in the sections listed below are permitted
+   to be used in SVG 1.2 BIMI:
+
+   o  8 Paths
+
+   o  9 Basic Shapes
+
+   o  10 Text
+
+   o  11 Painting
+
+
+
+
+
+
+Brotman                  Expires August 2, 2020                 [Page 2]
+
+Internet-Draft                  BIMI-SVG                    January 2020
+
+
+2.2.  Disallowed sections
+
+   THe attributes described in the sections below are expressly
+   forbidden from use in SVG 1.2 BIMI:
+
+   o  12 Multimedia
+
+   o  13 Interactivity
+
+   o  14 Linking
+
+   o  15 Scripting
+
+   o  16 Animation
+
+   o  18 Metadata
+
+2.3.  Unadvised Sections
+
+   The sections below are of questionable value to the documents, but
+   are not expressly forbidden.
+
+   o  17 Fonts
+
+2.4.  Required Attributes
+
+   The attribites below are required for SVG 1.2 BIMI.  These should be
+   declared in the base "<svg>" tag.
+
+   o  title: This is a space where the title of the entity MUST be
+      published.  This may allow for individuals with disabilities to
+      have some knowledge about the image.  For brevity, this SHOULD be
+      no more 64 characters.
+
+   o  desc: A longer description would be permitted here, if necessary.
+
+   o  version: This attribute MUST be set to "1.2".
+
+   o  baseProfile: This attribute MUST be set to "tiny".
+
+   o  zoomAndPan: This attribute MUST be set to disable, as it may cause
+      issues in a user interface.
+
+   o  externalResourcesRequired: This attribute MUST be set to "false"
+      so that external resources are not required for rendering.
+
+   o  preserveAspectRatio: This should be set to xMidYMid, and should
+      center the image in the viewbox when the size is changed.
+
+
+
+Brotman                  Expires August 2, 2020                 [Page 3]
+
+Internet-Draft                  BIMI-SVG                    January 2020
+
+
+   "<svg width="1cm" height="1cm" version="1.2" baseProfile="tiny"
+   zoomAndPan="disable"" "externalResourcesRequires="false"
+   perserveAspectRatio="xMidYMid""
+
+2.5.  Elements allowed in SVG 1.2 BIMI
+
+   "Do we want to explicitly state which tags are permitted?"
+
+3.  Notes
+
+   <https://www.w3.org/TR/2011/REC-SVG11-20110816/>
+
+   <https://www.w3.org/TR/2008/REC-SVGTiny12-20081222/>
+
+   Comparison: <https://tools.ietf.org/html/rfc7996> (esp note App A:
+   RNC for validation)
+
+4.  Security Considerations
+
+   N/A
+
+5.  Contributors
+
+   TBD
+
+6.  References
+
+   TBD
+
+Author's Address
+
+   Alex Brotman
+   Comcast, Inc
+
+   Email: alex_brotman@comcast.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Brotman                  Expires August 2, 2020                 [Page 4]
